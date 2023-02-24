@@ -9,4 +9,5 @@ function draw() {
   movimentaCarro();
   movimentaAtorCima();
   movimentaAtorBaixo();
+  voltaPosicaoInicialDoCarro();
 }
