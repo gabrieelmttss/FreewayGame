@@ -1,38 +1,25 @@
-//Carro 1
-let xCarro = 600;
-let yCarro = 45;
-let velocidadeCarro1 = 3;
-
-//Carro 2
-let xCarro2 = 600;
-let yCarro2 = 100;
-let velocidadeCarro2 = 4;
-
-//Carro 3
-let xCarro3 = 600;
-let yCarro3 = 155;
-let velocidadeCarro3 = 6;
+let xCarros = [600, 600, 600, 600, 600, 600];
+let yCarros = [45, 101, 155, 215, 268, 323]
+let velocidadeCarros = [3, 4, 6, 8, 2.5, 3]
+let comprimentoCarro = 40;
+let alturaCarro = 30;
 
 function mostraCarro() {
-    image(imagemCarro, xCarro, yCarro, 40, 30);
-    image(imagemCarro2, xCarro2, yCarro2, 40, 30);
-    image(imagemCarro3, xCarro3, yCarro3, 40, 30);
+    for(let i = 0; i < imagemCarros.length; i++){
+        image(imagemCarros[i], xCarros[i], yCarros[i], comprimentoCarro, alturaCarro);
+    }
   }
   
   function movimentaCarro() {
-    xCarro -= velocidadeCarro1;
-    xCarro2 -= velocidadeCarro2;
-    xCarro3 -= velocidadeCarro3;
+    for(let i = 0; i < imagemCarros.length; i++){
+        xCarros[i] -= velocidadeCarros[i];
+    }
   }
 
 function voltaPosicaoInicialDoCarro() {
-    if (xCarro < -40){
-        xCarro = 600;
-    }
-    if (xCarro2 < -50){
-        xCarro2 = 600;
-    }
-    if (xCarro3 < -50){
-        xCarro3 = 600;
+    for(let i = 0; i < imagemCarros.length; i++){
+        if (xCarros[i] < -40){
+            xCarros[i] = 600;
+        }
     }
 }
